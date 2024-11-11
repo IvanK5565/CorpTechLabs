@@ -51,10 +51,26 @@ class Simpson(Integrator):
 
 def f(x):
     return x*x
-
-simpson = Simpson(0, 2, 1010) 
+print("101: ")
+simpson = Simpson(0, 2, 101) 
 print(simpson.integrate(f)) 
-trapez = Trapezoidal(0, 2, 1010) 
+trapez = Trapezoidal(0, 2, 101) 
 print(trapez.integrate(f))
-trapez = Midpoint(0, 2, 1010) 
+trapez = Midpoint(0, 2, 101) 
+print(trapez.integrate(f))
+
+print("11:")
+simpson = Simpson(0, 2, 11) 
+print(simpson.integrate(f)) 
+trapez = Trapezoidal(0, 2, 11) 
+print(trapez.integrate(f))
+trapez = Midpoint(0, 2, 11) 
+print(trapez.integrate(f))
+
+print("Exact:")
+simpson = Simpson(0, 2, 1000001) 
+print(simpson.integrate(f)) 
+trapez = Trapezoidal(0, 2, 1000001) 
+print(trapez.integrate(f))
+trapez = Midpoint(0, 2, 1000001) 
 print(trapez.integrate(f))
